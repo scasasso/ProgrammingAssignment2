@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The following code allows to create a matrix object 
+## which is able to cache the computation of the inverse
+## thus avoiding unnecessary computations
 
-## Write a short comment describing this function
+## This function creates a list of "setters"
+## and "getters" for a matrix object (passed as argument)
 
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
@@ -20,7 +22,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This functions computes the inverse of the matrix (passed as argument)
+## if it has never been computed before. Otherwise it returns the cached result.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
